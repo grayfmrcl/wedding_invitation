@@ -1,0 +1,42 @@
+{
+  "title": "Pernikahan dari:",
+  "profile": [
+    {
+      "groom": {
+        "name": "Grayfield Miracle",
+        "nickname": "Ray",
+        "description": "Putra pertama Bpk Alexander Moningkey dan Ibu Anneke Pratasik "
+      }
+    },
+    {
+      "bride": {
+        "name": "Cinia Eleonora",
+        "nickname": "Nia",
+        "description": "Putri Pertama Bpk Pierre de la Motte dan Ibu Rita Muntu"
+      }
+    }
+  ],
+  "wording": {
+    "jumbotron": {
+      "quotes": "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan isterinya, sehingga keduanya menjadi satu daging.",
+      "author": "Kejadian 2:24"
+    },
+    "banner": {
+      "quotes": "Pernikahan yang bahagia adalah percakapan yang panjang yang selalu terasa sangat cepat",
+      "author": "A. Maurois"
+    }
+  },
+  "events": {
+    "date": "17",
+    "holyMatrimony": {
+      "title": "Pemberkatan Nikah",
+      "time": "10.00 WITA",
+      "venue": "Chapel of Mother Mary"
+    },
+    "reception": {
+      "title": "Resepsi",
+      "time": "17.00 WITA",
+      "venue": "Jhoanie Hotel and Restaurant"
+    }
+  }
+}

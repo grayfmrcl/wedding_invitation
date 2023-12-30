@@ -1,0 +1,43 @@
+{
+  "Title": "The Wedding Of:",
+  "profile": [
+    {
+      "groom": {
+        "name": "Grayfield Miracle",
+        "nickname": "Ray",
+        "description": "The oldest Son of Mr Alexander Moningkey and Mrs Anneke Pratasik"
+      }
+    },
+    {
+      "bride": {
+        "name": "Cinia Eleonora",
+        "nickname": "Nia",
+        "description": "The only Daughter of Mr Pierre de la Motte and Mrs Rita Muntu"
+      }
+    }
+  ],
+  "wording": {
+    "jumbotron": {
+      "quotes": "Therefore a man shall leave his father and his mother and hold fast to his wife, and they shall become one flesh",
+      "author": "Genesis 2:24"
+    },
+    "banner": {
+      "quotes": "A happy marriage is a long conversation which always seems too short.",
+      "author": "A. Maurois"
+      
+    } 
+  },
+  "events": {
+    "date": "",
+    "holyMatrimony": {
+      "name": "Holy Matrimony",
+      "time": "10.00 WITA",
+      "place": "Chapel of Mother Mary"
+    },
+    "reception": {
+      "title": "Reception",
+      "time": "17.00 WITA",
+      "venue": "Jhoanie Hotel and Restaurant"
+    }
+  }
+}
