@@ -13,7 +13,7 @@ import Thankyou from '../components/Thankyou'
 
 
 
-function Home () {
+function Home({ guests }) {
   return (
     <>
       <Navbar />
@@ -23,8 +23,8 @@ function Home () {
       <Invitaion />
       <Gallery />
       <Reservation />
-      <Quotes />      
-      <Congratulations />
+      <Quotes />
+      <Congratulations guests={guests ?? []} />
       <Maps />
       <Thankyou />
 
