@@ -7,7 +7,6 @@ import Reservation from '../components/Reservation'
 import Gallery from '../components/Gallery'
 import Congratulations from '../components/Congratulations'
 import Invitation from '../components/Invitation'
-import Maps from '../components/Maps'
 import Quotes from '../components/Quotes'
 import Thankyou from '../components/Thankyou'
 import Cover from './Cover'
@@ -21,10 +20,16 @@ function Home() {
   const [guestList, setGuestList] = useState({});
   const [user, setUser] = useState();
 
-  const postComment = (comment) => {
+  function postComment(comment) {
     const updates = {};
     updates[`/guests/${key}/comment`] = comment;
     updates[`/guests/${key}/commentedAt`] = new Date().valueOf();
+    return update(ref(db), updates)
+  }
+
+  function confirmAttendee(attendeeCount) {
+    const updates = {};
+    updates[`/guests/${key}/attendeeConfirmed`] = attendeeCount;
     return update(ref(db), updates)
   }
 
@@ -53,10 +58,9 @@ function Home() {
       <Wedding />
       <Invitation />
       <Gallery />
-      {user.attendeeLimit > 0 ? <Reservation /> : <></>}
+      {user.attendeeLimit > 0 ? <Reservation user={user} confirmAttendee={confirmAttendee} /> : <></>}
       <Quotes />
       <Congratulations guestList={guestList} user={user} postComment={postComment} />
-      <Maps />
       <Thankyou />
     </>
   )

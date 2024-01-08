@@ -1,25 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
-function Reservation() {
+function Reservation({ user, confirmAttendee }) {
+  const [attendeeConfirmed, setAttendeeConfirmed] = useState(user.attendeeConfirmed ?? 0);
 
-  function addRSVP(event) {
-    console.log(event)
-    //   event.preventDefault()
-    //   fetch(serverUrl, {  
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify(newComment),
-    //   })
-    //     .then(res => res.json())
-    //     .then(post => {
-    //       console.log(post)
-    //       fetchComments()
-    //     })
-    //     .catch(err => console.log(err))
+  function handleChangeAttendee(e) {
+    let value = e.target.value;
+    if (value > user.attendeeLimit) {
+      value = user.attendeeLimit;
+    }
+    setAttendeeConfirmed(value);
+  }
+
+  function handleConfirmAttendee(e) {
+    confirmAttendee(Number(attendeeConfirmed));
+    e.preventDefault();
   }
 
   return (
@@ -34,32 +30,29 @@ function Reservation() {
         <div style={{ fontFamily: 'Quicksand', color: '#6C3428' }}>
           <p>Help us prepare a warm meal for all of you by sending a confirmation of attendance via the following form: </p>
         </div>
-        <form onSubmit={addRSVP}>
+        <form onSubmit={handleConfirmAttendee}>
           <div className="mb-3">
-            <label style={{ fontFamily: 'Quicksand', color: '#6C3428' }}> Name </label>
-            <input type='text' className="form-control" id='name'>
-            </input>
-          </div>
-
-          <div className="mb-3">
-            <label style={{ fontFamily: 'Quicksand', color: '#6C3428' }}> Phone </label>
-            <input type='text' className="form-control" id='phone'>
-            </input>
-          </div>
-
-          <div className="mb-3">
-            <label style={{ fontFamily: 'Quicksand', color: '#6C3428' }}> Will you attend </label>
-            <div>
-              <input type='radio' className="form-check-input" id='rsvp' value="yes" ></input>
-              <span style={{ fontFamily: 'Quicksand', color: '#6C3428', marginLeft: '2vh' }} > Yes</span>
-            </div>
-            <div>
-              <input type='radio' className="form-check-input" id='rsvp' value="no" ></input>
-              <span style={{ fontFamily: 'Quicksand', color: '#6C3428', marginLeft: '2vh' }} > No</span>
+            <p style={{ fontFamily: 'Quicksand', color: '#6C3428', }}>
+              How many family members will attend?
+            </p>
+            <div className="d-flex justify-content-center">
+              <input type='number' className="form-control p-2" id='attendeeConfirmed'
+                style={{ width: 'fit-content' }}
+                min={0}
+                max={user.attendeeLimit}
+                value={attendeeConfirmed}
+                onChange={handleChangeAttendee}
+              />
+              <span className="p-2" style={{ fontFamily: 'Quicksand', color: '#6C3428', }}>
+                of <b>{user.attendeeLimit}</b> will attend.
+              </span>
             </div>
           </div>
+          <p style={{ fontFamily: 'Quicksand', color: '#6C3428', fontSize: '12px' }}>
+            <i>This invitation is valid for {user.attendeeLimit} persons</i>
+          </p>
           <div className="mb-3">
-            <button type="submit" className="btn mb-3" style={{ fontFamily: 'Quicksand', backgroundColor: '#6C3428', color: '#ffeedb' }} > SEND </button>
+            <button className="btn mb-3" disabled={attendeeConfirmed < 1} style={{ fontFamily: 'Quicksand', backgroundColor: '#6C3428', color: '#ffeedb' }} > SEND </button>
           </div>
         </form>
       </div>
