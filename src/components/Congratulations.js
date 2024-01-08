@@ -1,48 +1,55 @@
 // eslint-disable-next-line
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Comment from './Comment'
 
-// eslint-disable-next-line
-const serverUrl = process.env.REACT_APP_SERVER_URL;
+function Congratulations({ guestList, user, postComment }) {
+  const guestComments = Object.keys(guestList)
+    .map((key) => ({
+      key: key,
+      title: guestList[key].title,
+      comment: guestList[key].comment,
+      commentedAt: guestList[key].commentedAt
+    }))
+    .filter((guest) => !!guest.comment)
+    .sort((a, b) => b.commentedAt - a.commentedAt);
 
-function Congratulations({ guests }) {
-  const guestComments = guests.filter((guest) => !!guest.comment);
+  const userComment = guestComments.find((guest) => guest.key === user.key);
 
-  // let [comments, setComments] = useState([])
-  let [newComment, setNewComment] = useState({
-    name: '',
-    message: ''
-  })
+  const displayedComments = [
+    userComment,
+    ...guestComments.filter((guest) => guest.key !== user.key).slice(0, 10)
+  ].filter((comments) => !!comments);
 
-  function addComment(event) {
+  const [comment, setComment] = useState('');
+
+  function handleChangeComment(e) {
+    setComment(e.target.value);
+  }
+
+  function handlePostComment(e) {
+    postComment(comment);
+    setComment('');
+    e.preventDefault();
   }
 
   return (
     <div className='container' id='congratulations' style={{ backgroundColor: "#FFF5EA", paddingBottom: "30px" }}>
-      <h1 style={{ fontFamily: 'Quicksand', color: '#968C83', marginBottom: '5vh' }}> <b> Congratulations </b></h1>
-      <form className='container col-8' onSubmit={addComment}>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlInput1" className="form-label" style={{ color: '#968C83' }}>Name</label>
-          <input type="text" className="form-control" id="name"
-            onChange={(event) => setNewComment({ ...newComment, name: event.target.value })}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlTextarea1" className="form-label" style={{ color: '#968C83' }}>Messages</label>
-          <textarea className="form-control" id="wish" rows="3"
-            onChange={(event) => setNewComment({ ...newComment, message: event.target.value })}
-          ></textarea>
-        </div>
+      <h1 style={{ fontFamily: 'Quicksand', color: '#968C83', marginBottom: '3vh' }}> <b> Congratulations </b></h1>
 
+      <form className='container col-8' onSubmit={handlePostComment}>
         <div className="mb-3">
-          <button type="submit" className="btn mb-3" style={{ backgroundColor: '#968C83', color: '#ffeedb' }}> Send</button>
+          <label htmlFor="exampleFormControlTextarea1" className="form-label" style={{ color: '#968C83' }}>Your wish</label>
+          <textarea id="text_wish" name="wish" className="form-control" rows="3" value={comment} onChange={handleChangeComment}></textarea>
+        </div>
+        <div className="mb-3">
+          <button className="btn mb-3" style={{ backgroundColor: '#968C83', color: '#ffeedb' }} disabled={comment.length < 3}> Send</button>
         </div>
       </form>
 
       <div className='rounded-3 container col-9' style={{ backgroundColor: '#968C83' }}>
-        {guestComments.map((guest) => <Comment key={guest.key} title={guest.title} comment={guest.comment} />)}
+        {displayedComments.map((guest) => <Comment key={guest.key} title={guest.title} comment={guest.comment} />)}
       </div>
-    </div>
+    </div >
   )
 }
 
