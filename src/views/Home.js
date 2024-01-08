@@ -53,7 +53,7 @@ function Home() {
       <Wedding />
       <Invitation />
       <Gallery />
-      <Reservation />
+      {user.attendeeLimit > 0 ? <Reservation /> : <></>}
       <Quotes />
       <Congratulations guestList={guestList} user={user} postComment={postComment} />
       <Maps />
