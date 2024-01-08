@@ -34,11 +34,13 @@ function Congratulations({ guestList, user, postComment }) {
 
   return (
     <div className='container' id='congratulations' style={{ backgroundColor: "#FFF5EA", paddingBottom: "30px" }}>
-      <h1 style={{ fontFamily: 'Quicksand', color: '#968C83', marginBottom: '3vh' }}> <b> Congratulations </b></h1>
+      <h1 className="p-3" style={{ fontFamily: 'Quicksand', color: '#968C83' }}> <b> Congratulations </b></h1>
 
       <form className='container col-8' onSubmit={handlePostComment}>
         <div className="mb-3">
-          <label htmlFor="exampleFormControlTextarea1" className="form-label" style={{ color: '#968C83' }}>Your wish</label>
+          <label htmlFor="exampleFormControlTextarea1" className="form-label" style={{ color: '#968C83' }}>
+            Send us your wish
+          </label>
           <textarea id="text_wish" name="wish" className="form-control" rows="3" value={comment} onChange={handleChangeComment}></textarea>
         </div>
         <div className="mb-3">
