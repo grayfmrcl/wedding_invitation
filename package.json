@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "guests:upload": "node script/uploadGuests.js"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +43,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "csv-parser": "^3.0.0",
     "postcss": "^8.3.2",
-    "tailwindcss": "^2.1.4"
+    "tailwindcss": "^2.1.4",
+    "uuid": "^9.0.1"
   }
 }
