@@ -26,7 +26,7 @@ function Gallery() {
         <img className="img-fluid rounded-3" alt='photo3' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmZhQinSehafedm1sf95A7V5fnp2DLdu7WfMTRuQZ5r4NF?_gl=1*rtao21*_ga*NjIxMTA3OTI2LjE2OTgyOTk3MjA.*_ga_5RMPXG14TE*MTY5ODMxNTk1NC4zLjEuMTY5ODMxNjAwNi44LjAuMA.."} style={{ width: '33%', marginBottom: '2vh' }} />
         <img className="img-fluid rounded-3" alt='photo3' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmZq62KiHpKZZE6PsryMVgH83HnmqRVeMcHUamHpSoZLEv?_gl=1*ggfgio*_ga*NjIxMTA3OTI2LjE2OTgyOTk3MjA.*_ga_5RMPXG14TE*MTY5ODMxNTk1NC4zLjEuMTY5ODMxNjAwMy4xMS4wLjA."} style={{ width: '33%', marginBottom: '2vh' }} />
       </div>
-      <audio autoPlay={true} controls={true} src={bgm} />
+      <audio autoPlay={true} controls={true} loop={true} src={bgm} />
     </div>
   )
 }
