@@ -44,6 +44,7 @@ function Congratulations({ guestList, user, postComment }) {
           <a
             role="button"
             className="btn"
+            target="_blank"
             style={{ backgroundColor: '#968C83', color: '#ffeedb' }}
             href="https://www.myregistry.com/wedding-registry/cinia-eleonora-and-grayfield-miracle-tangerang-banten/4092156">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">

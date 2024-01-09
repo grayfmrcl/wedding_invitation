@@ -44,7 +44,11 @@ function Invitation() {
         </div>
 
         <div style={{ padding: '1vh' }}>
-          <a href="https://calendar.google.com/calendar/r/eventedit?text=Ray+%26+Nia+Wedding+&amp;dates=20240117T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml" style={{ color: '#556052' }}>
+          <a
+            href="https://calendar.google.com/calendar/r/eventedit?text=Ray+%26+Nia+Wedding+&amp;dates=20240117T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
+            style={{ color: '#556052' }}
+            target="_blank"
+          >
             <button className='btn btn-save' style={{ backgroundColor: '#968C83', color: '#F7F4E3', padding: '1vh' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
                 <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
@@ -98,7 +102,11 @@ function Invitation() {
         </div>
 
         <div style={{ padding: '1vh' }}>
-          <a href="https://calendar.google.com/calendar/r/eventedit?text=Dio+%26+Clara+Wedding+&amp;dates=20210626T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml" style={{ color: '#556052' }}>
+          <a
+            href="https://calendar.google.com/calendar/r/eventedit?text=Dio+%26+Clara+Wedding+&amp;dates=20210626T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
+            style={{ color: '#556052' }}
+            target="_blank"
+          >
             <button className='btn btn-save' style={{ backgroundColor: '#F7F4E3', color: '#B3A492', padding: '1vh' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
                 <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
