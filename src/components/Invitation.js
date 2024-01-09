@@ -38,14 +38,18 @@ function Invitation() {
               <path fillRule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
               <path fillRule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
             </svg>
-            <span style={{ fontFamily: 'Quicksand', color: '#968C83', marginLeft: '2vh', fontSize: '2vh', marginTop: '1vh' }}> Chapel of Mother Marry</span>
-
+            <a
+              href="https://maps.app.goo.gl/mHWpRp786TXRK5Ve6"
+              target="_blank"
+              style={{ fontFamily: 'Quicksand', color: '#968C83', marginLeft: '2vh', fontSize: '2vh', marginTop: '1vh' }}>
+              Chapel of Mother Mary (Bukit Doa), Tomohon
+            </a>
           </div>
         </div>
 
         <div style={{ padding: '1vh' }}>
           <a
-            href="https://calendar.google.com/calendar/r/eventedit?text=Ray+%26+Nia+Wedding+&amp;dates=20240117T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
+            href="https://calendar.google.com/calendar/r/eventedit?text=Grayfield+%26+Cinia+Wedding+&amp;dates=20240117T100000/20240117T120000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
             style={{ color: '#556052' }}
             target="_blank"
           >
@@ -97,13 +101,19 @@ function Invitation() {
               <path fillRule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
               <path fillRule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
             </svg>
-            <span style={{ fontFamily: 'Quicksand', color: '#F7F4E3', marginLeft: '2vh', fontSize: '2vh', marginTop: '1vh' }}> Jhoanie Hotel and Resto </span>
+            <a
+              href="https://maps.app.goo.gl/iCzrog3DQoH6AMmJ8"
+              target="_blank"
+              style={{ fontFamily: 'Quicksand', color: '#F7F4E3', marginLeft: '2vh', fontSize: '2vh', marginTop: '1vh' }}
+            >
+              Jhoanie Hotel and Resto, Tomohon
+            </a>
           </div>
         </div>
 
         <div style={{ padding: '1vh' }}>
           <a
-            href="https://calendar.google.com/calendar/r/eventedit?text=Dio+%26+Clara+Wedding+&amp;dates=20210626T140000/20210626T150000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
+            href="https://calendar.google.com/calendar/r/eventedit?text=Grayfield+%26+Cinia+Wedding+&amp;dates=20240117T170000/20240117T200000&amp;ctz=Asia/Singapore&amp;details=We+would+be+more+than+happy+to+see+Your+bright+faces+in+our+wedding&amp;pli=1&amp;uid=1521339627addtocalendar&amp;sf=true&amp;output=xml"
             style={{ color: '#556052' }}
             target="_blank"
           >
