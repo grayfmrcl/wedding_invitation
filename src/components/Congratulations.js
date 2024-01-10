@@ -53,8 +53,15 @@ function Congratulations({ guestList, user, postComment }) {
             <span> Gifts Registry</span>
           </a>
           <p
-            className="p-2"
-            style={{ fontFamily: 'Quicksand', color: '#6C3428', fontSize: '12px' }}>
+            className="p-1"
+            style={{ fontFamily: 'Quicksand', color: '#6C3428', fontSize: '12px', marginBottom: '0rem' }}
+          >
+            password: graynia
+          </p>
+          <p
+            className="p-1"
+            style={{ fontFamily: 'Quicksand', color: '#6C3428', fontSize: '12px' }}
+          >
             <i>This registry list are to avoid gifts duplication</i>
           </p>
         </div>
@@ -69,7 +76,7 @@ function Congratulations({ guestList, user, postComment }) {
             <span> 5350133412</span>
           </button>
           <p className="p-2" style={{ fontFamily: 'Quicksand', color: '#6C3428', fontSize: '12px' }}>
-            Bank BCA &#8226; Cinia Eleonora Dela Motte
+            BCA &#8226; Cinia Eleonora Dela Motte
           </p>
         </div>
       </div>
