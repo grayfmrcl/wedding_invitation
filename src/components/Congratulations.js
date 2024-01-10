@@ -17,7 +17,7 @@ function Congratulations({ guestList, user, postComment }) {
 
   const displayedComments = [
     userComment,
-    ...guestComments.filter((guest) => guest.key !== user.key).slice(0, 10)
+    ...guestComments
   ].filter((comments) => !!comments);
 
   const [comment, setComment] = useState('');
