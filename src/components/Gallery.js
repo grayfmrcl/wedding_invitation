@@ -1,11 +1,26 @@
-import React from 'react'
-import bgm from '../assets/bgm.mp3'
+import React, { useEffect, useState } from 'react'
+import bgmAsset from '../assets/bgm.mp3'
 
 function Gallery() {
+  useEffect(() => {
+    const audio = document.getElementById('bgm');
+    playAudio(audio);
+  }, [])
+
+  function playAudio(audio) {
+    try {
+      audio.loop();
+      audio.play();
+    } catch (err) {
+      audio.play();
+    }
+  }
+
   return (
     <div className='container' id="gallery" style={{ padding: '5vh', backgroundColor: '#FFF5EA', opacity: '0.9' }}>
-      <h1 style={{ fontFamily: 'Quicksand', color: '#968C83', marginBottom: '5vh' }}><b> Gallery </b></h1>
-      <div className='row' style={{ display: "inline-block" }}>
+      <h1 style={{ fontFamily: 'Quicksand', color: '#968C83', marginBottom: '2vh' }}><b> Gallery </b></h1>
+      <audio id="bgm" type="audio/mpeg" controls={true} loop={true} src={bgmAsset} />
+      <div className='row' style={{ display: "inline-block", marginTop: '3vh' }}>
         {/* FIRST ROW  */}
         <img className="img-fluid rounded-3" alt='photo2' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmQa96qE4feFfbYx1SP8JDusjjzNqqe7YUKMD58SaFUuAX?_gl=1*1ce0yyc*_ga*ODAyODE4MDgxLjE2OTc2ODgzNjA.*_ga_5RMPXG14TE*MTY5NzgxNDM5Ny43LjAuMTY5NzgxNDM5OS41OC4wLjA."} style={{ width: '50%', marginBottom: '2vh' }} />
         <img className="img-fluid rounded-3" alt='photo2' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmTxVwZpyiWYBNifX4wM44S8KsA5KyFnSrhNZGS81yadLt?_gl=1*emcqu9*_ga*NjIxMTA3OTI2LjE2OTgyOTk3MjA.*_ga_5RMPXG14TE*MTY5ODMxNTk1NC4zLjEuMTY5ODMxNjAwMS4xMy4wLjA."} style={{ width: '50%', marginBottom: '2vh' }} />
@@ -26,7 +41,6 @@ function Gallery() {
         <img className="img-fluid rounded-3" alt='photo3' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmZhQinSehafedm1sf95A7V5fnp2DLdu7WfMTRuQZ5r4NF?_gl=1*rtao21*_ga*NjIxMTA3OTI2LjE2OTgyOTk3MjA.*_ga_5RMPXG14TE*MTY5ODMxNTk1NC4zLjEuMTY5ODMxNjAwNi44LjAuMA.."} style={{ width: '33%', marginBottom: '2vh' }} />
         <img className="img-fluid rounded-3" alt='photo3' src={"https://red-thin-mammal-568.mypinata.cloud/ipfs/QmZq62KiHpKZZE6PsryMVgH83HnmqRVeMcHUamHpSoZLEv?_gl=1*ggfgio*_ga*NjIxMTA3OTI2LjE2OTgyOTk3MjA.*_ga_5RMPXG14TE*MTY5ODMxNTk1NC4zLjEuMTY5ODMxNjAwMy4xMS4wLjA."} style={{ width: '33%', marginBottom: '2vh' }} />
       </div>
-      <audio autoPlay={true} controls={true} loop={true} src={bgm} />
     </div>
   )
 }
